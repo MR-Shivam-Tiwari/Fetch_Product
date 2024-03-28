@@ -10,7 +10,7 @@ function Home() {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch('https://fakestoreapi.com/products');
+      const response = await fetch('https://fetch-product-mu.vercel.app/products');
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }

@@ -1,13 +1,16 @@
-
 const express = require('express');
 const productsAPI = require('./productsAPI');
 const productDetailAPI = require('./productDetailAPI');
+const cors = require('cors'); // Import the cors package
 
 const app = express();
 const port = 5000;
 
 // Middleware for JSON parsing
 app.use(express.json());
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Endpoint to get all products
 app.get('/products', async (req, res) => {
@@ -18,9 +21,6 @@ app.get('/products', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
-
-
-
 
 // Endpoint to get product detail by ID
 app.get('/products/:id', async (req, res) => {
