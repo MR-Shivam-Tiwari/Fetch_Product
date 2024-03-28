@@ -13,13 +13,13 @@ function ProductDetail() {
       try {
         // Make a GET request to your backend API with the 'id' parameter
         const response = await axios.get(
-          `https://fakestoreapi.com/products/${id}`
+          `https://fetch-product-mu.vercel.app/products/${id}`
         );
         // Set the fetched product data to the state
         setProduct(response.data);
         setLoading(false);
       } catch (error) {
-        // Handle errors
+        // Handle errorsfor
         setError(error);
         setLoading(false);
       }
@@ -85,7 +85,7 @@ function ProductDetail() {
       <header className="border-b p-4">
         <div className="w-full max-w-6xl mx-auto grid items-center h-14 px-4 sm:px-6">
           <div className="flex items-center gap-4">
-            <a className="flex items-center gap-2 font-semibold" href="#">
+            <a className="flex items-center gap-2 font-semibold" href="/">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -93,9 +93,9 @@ function ProductDetail() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="h-6 w-6"
               >
                 <path d="m7.5 4.27 9 5.15"></path>
@@ -129,7 +129,7 @@ function ProductDetail() {
               <div className="grid gap-2">
                 <label
                   className="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-base"
-                  for="color"
+                  htmlFor="color"
                 >
                   Category
                 </label>
@@ -139,13 +139,13 @@ function ProductDetail() {
                   dir="ltr"
                   className="flex items-center gap-2"
                   id="color"
-                  tabindex="0"
+                  tabIndex="0"
                   // style="outline: none;"
                   style={{ outline: "none" }}
                 >
                   <label
                     className="text-sm capitalize  font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 border cursor-pointer rounded-md p-2 flex items-center gap-2 [&amp;:has(:checked)]:bg-gray-100 dark:[&amp;:has(:checked)]:bg-gray-800"
-                    for="color-black"
+                    htmlFor="color-black"
                   >
                     <button
                       type="button"
@@ -155,7 +155,7 @@ function ProductDetail() {
                       value="black"
                       className="aspect-square h-4 w-4 rounded-full border border-primary text-primary ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       id="color-black"
-                      tabindex="-1"
+                      tabIndex="-1"
                       data-radix-collection-item=""
                     >
                       <span
@@ -169,9 +169,9 @@ function ProductDetail() {
                           viewBox="0 0 24 24"
                           fill="none"
                           stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                           className="h-2.5 w-2.5 fill-current text-current"
                         >
                           <circle cx="12" cy="12" r="10"></circle>
@@ -202,7 +202,7 @@ function ProductDetail() {
               <div className="grid gap-2">
                 <label
                   className="font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-base"
-                  for="quantity"
+                  htmlFor="quantity"
                 >
                   Quantity
                 </label>
@@ -234,9 +234,9 @@ function ProductDetail() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="w-4 h-4 mr-2"
                 >
                   <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 
 function Home() {
   const [products, setProducts] = useState([]);
-  const [sortBy, setSortBy] = useState('');
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -38,7 +37,7 @@ function Home() {
         <header className="border-b p-4">
           <div className="w-full max-w-6xl mx-auto grid items-center h-14 px-4 sm:px-6">
             <div className="flex items-center gap-4">
-              <a className="flex items-center gap-2 font-semibold" href="#">
+              <a className="flex items-center gap-2 font-semibold" href="/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -46,9 +45,9 @@ function Home() {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="h-6 w-6"
                 >
                   <path d="m7.5 4.27 9 5.15"></path>
